@@ -36,7 +36,6 @@ function Signup({setCurrentUser}) {
                 history.push('/game')
               })
             } else {
-              setCurrentUser({ username: "Dakota" })
               history.push('/game')
               res.json().then(errors => {
                 console.error(errors)

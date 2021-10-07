@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2021_10_06_210750) do
   create_table "scripts", force: :cascade do |t|
     t.string "choice"
     t.string "prompt"
+    t.string "image_url"
+    t.string "image_url2"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
