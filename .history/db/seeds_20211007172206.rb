@@ -22,12 +22,9 @@ optionD = Option.create(choice_value: "Ignore", detail: "You try to walk past th
 # script2n = Option.create(choice_value: "No", detail: ",")
 script2END = Script.create(choice: "Approach", image_url: "https://66.media.tumblr.com/5dda5d4ed2387ea3e153ed81c4193ded/22a54f4b4b664b7c-24/s500x750/c6c2b542b69012657062835edc049651957e8a3b.gif", image_url2: "https://i.makeagif.com/media/5-19-2015/ao13Ob.gif", prompt: "The sick man catches you by surprise and bites your shoulder. You manage to get away from him but gradually become more and more exhausted. You stop in your tracks to rest at a tree and suddenly lose consciousnesss. You awaken in a dream. The feeling is strangely familiar...")
 
-script2IgnoreChoice = Script.create(choice: "Ignore", image_url:"https://bloodborne.wiki.fextralife.com/file/Bloodborne/beast_patient.jpg", image_url2: "", prompt: "You try to walk past the sick man. He catches wind of you and chases you with a crazed look in his eye." )
+script2IgnoreChoice = Script.create(choice: "Ignore", image_url:"", image_url2: "", prompt: "You try to walk past the sick man. He catches wind of you and chases you with a crazed look in his eye." )
 optionZ = Option.create(choice_value: "Hide", detail: "You find a stack of bushes to hide in. The crazed man runs past you and you manage to escape.", script: script2IgnoreChoice)
-optionY = Option.create(choice_value: "Engage him", detail: "You grab a nearby rock and knock the crazed man to the ground, killing him. You suddenly feel a surge of power and feel signficantly stronger.", script: script2IgnoreChoice)
-
-scriptEngage = Script.create(choice: "Engage him", image_url: "https://cdn.vox-cdn.com/thumbor/b1WgZL32J3_dUXkusYHiWIf0dCc=/148x0:1768x1080/1400x1400/filters:focal(148x0:1768x1080):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/46362928/Bloodborne__20150326204325.0.0.jpg", image_url2: "https://static.wikia.nocookie.net/bloodborne/images/a/a2/Insight_%E2%84%961.png/", prompt: "You grab a nearby rock and knock the crazed man to the ground, killing him. You suddenly feel a surge of power and feel signficantly stronger." )
-scriptHide = Script.create(choice: "Hide", image_url: "https://guides.gamepressure.com/sekiro-shadows-die-twice/gfx/word/552599906.jpg", image_url2: "", prompt: "You find a stack of bushes to hide in. The crazed man runs past you and you manage to escape." )
+optionY = Option.create(choice_value: "Engage him", detail: "You grab a nearby rock and knock the crazed man to the ground, killing him. ", script: script2IgnoreChoice)
 
 # script200 = Script.create(choice: "Hide", )
 
@@ -39,21 +36,19 @@ script3y = Script.create(choice: "Explore the abandoned town", image_url: "https
 optionG = Option.create(choice_value: "Steal their weapons", detail: "You carefully grab their weapons without alerting them. You acquire a saw cleaver and a short pistol with 11 rounds of ammunition.", script: script3y)
 optionH = Option.create(choice_value: "Ignore them", detail: "You carefully walk past the men until you reach a massive staircase. You climb up to the peak of the steps where a grand church lies.", script: script3y)
 
-script3n = Script.create(choice: "Make your way out of the abandoned town", image_url: "https://2.bp.blogspot.com/-_9cZRI8rhS4/WLluuIobZMI/AAAAAAAAQC0/LHcJ8sD8BoMtzmYcCIGl28gXFebftX7EACLcB/s1600/19%2B-%2BChurch%2BGiant.jpg", image_url2: "", prompt: "As you're on your way out of the abandoned town you stumble upon a cemetary. Two giants with a massive axes block your exit out of the abandoned town.")
+script3n = Script.create(choice: "Make your way out of the abandoned town", image_url: "https://memestatic1.fjcdn.com/thumbnails/comments/The+weapon+has+two+effective+modes+deployed+and+undeployed+the+_3de0a7c2b146ad88f2474cebaa2969f2.gif", prompt: "As you're on your way out of the abandoned town you stumble upon a cemetary. Two giants with a massive axes block your exit out of the abandoned town.")
 optionI = Option.create(choice_value: "Flee", detail: "You turn back and run back into the abandoned town. More monsters appear along the way until you're eventually chased up a long staircase. You take shelter in the church at the peak of the steps.", script: script3n)
 optionJ = Option.create(choice_value: "Fight", detail: "You dodge away from the giants' attacks. You approach one to strike them with your fists but it barely phases them. As you turn to run away the other giants grabs you and squeezes you to death.", script: script3n)
 
-script4y = Script.create(choice: "Steal their weapons", image_url: "https://news.toyark.com/wp-content/uploads/sites/4/2018/01/Gecco-Bloodborne-The-Old-Hunters-Statue-011-928x483.jpg", image_url2: "", prompt: "You carefully grab their weapons without alerting them. You acquire a saw cleaver and a short pistol with 11 rounds of ammunition.")
-optionK = Option.create(choice_value: "Make your way out of the abandoned town", detail: "You approach the exit gate of the town and are approached by two giants with axes.", script: script4y)
+script4y = Script.create(choice: "Steal their weapons", image_url: "", image_url2: "", prompt: "You carefully grab their weapons without alerting them. You acquire a saw cleaver and a short pistol with 11 rounds of ammunition.")
+optionK = Option.create(choice_value: "Exit the abandoned town.", detail: "You approach the exit gate of the town and are approached by two giants with axes.", script: script4y)
 optionL = Option.create(choice_value: "Continue exploring", detail: "You ascend the stairs at the center of the abandoned town to reach the grand church. You find a strange woman on the floor at the back of the church. She transforms into a monstrous beast and you engage in combat. You are victorious.", script: script4y)
 
 script4yEND = Script.create(choice: "Fight", image_url: "https://i.kinja-img.com/gawker-media/image/upload/s--eAT33Czo--/c_fit,fl_progressive,q_80,w_636/hyjjax0a1lnj4qnzjf4b.gif", image_url2: "https://bloodborne.wiki.fextralife.com/file/Bloodborne/Lesser%20Amygdala%20Grab.jpg", prompt: "You dodge away from the giants' attacks. You approach one to strike them with your fists but it barely phases them. As you turn to run away the other giants grabs you and squeezes you to death. Game over")
 
 script4nEND = Script.create(choice: "Flee", image_url: "https://www.wallpapertip.com/wmimgs/52-521113_-bloodborne-grand-cathedral-altar.jpg", image_url2: "https://64.media.tumblr.com/90ccf17fa291d6cb2ed8d4f2e9657b86/tumblr_ov4maoyvxZ1r34uq2o7_540.gifv", prompt: "You enter the church to find a woman in a wedding dress. As you approach to ask for help she transforms into a giant beast. You evade her attacks for as long as you can until she eventually kills you. Game over")
 
-scriptContinueExploringEND = Script.create(choice: "Continue exploring", image_url: "https://64.media.tumblr.com/dae13c3ab364ded1897eca79672c6e24/tumblr_ov4maoyvxZ1r34uq2o2_540.gifv", image_url2: "https://64.media.tumblr.com/140bec56c89af11c169ced744e399e32/tumblr_nony4m8JFG1rf8ljoo2_400.gifv", prompt: "You ascend the stairs at the center of the abandoned town to reach the grand church. You find a strange woman on the floor at the back of the church. She transforms into a monstrous beast and you engage in combat. You are victorious.")
 
-# scriptExitAbandonedTown = Script.create(choice: "Exit the abandoned town")
 
 
 

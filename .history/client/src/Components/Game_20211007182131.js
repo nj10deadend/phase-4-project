@@ -137,41 +137,17 @@ function Game () {
     // console.log(allScripts)
     // console.log(currentScript)
 
-    function resetGame() {
-        return(
-
-            setCurrentScript(
-                {
-                    "id": 1,
-                    "choice": "Start",
-                    "prompt": "You awaken in a dark cave with nothing but the clothes on your back. You see an opening farther down the cave revealing that it is nightime. Exit the cave?",
-                    "image_url": "https://cdn.mos.cms.futurecdn.net/cefc9df137ac1497ea222433b217786a.png",
-                    "image_url2": null,
-                    "options": [
-                    {
-                        "id": 1,
-                        "choice_value": "Yes"
-                    },
-                    {
-                        "id": 2,
-                        "choice_value": "No"
-                    }
-                    ]
-                }
-            )
-        )
-       
-    }
-
     
 
     return (
 
 
 
-        <div className="gameContainer">
+        <div>
+            <h1>Welcome to the Game</h1>
 
-            <h3>Previous Choice: {currentScript.choice}</h3>
+
+            <h3>{currentScript.choice}</h3>
             {/* <img src={currentScript.image_url} alt="Current Script"/> */}
             {renderImg()}
             {renderImg2()}
@@ -181,10 +157,6 @@ function Game () {
             <br></br>
             <br></br>
             {renderButton1()} {renderButton2()} 
-            <br></br>
-            <br></br>
-            <button className="button" onClick={resetGame}>Reset</button>
-
         </div>
     )
 }

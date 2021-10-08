@@ -170,8 +170,10 @@ function Game () {
 
 
         <div className="gameContainer">
+            <h1>Welcome to the Game</h1>
 
-            <h3>Previous Choice: {currentScript.choice}</h3>
+
+            <h3>{currentScript.choice}</h3>
             {/* <img src={currentScript.image_url} alt="Current Script"/> */}
             {renderImg()}
             {renderImg2()}
@@ -183,7 +185,7 @@ function Game () {
             {renderButton1()} {renderButton2()} 
             <br></br>
             <br></br>
-            <button className="button" onClick={resetGame}>Reset</button>
+            <button onClick={resetGame}>Reset</button>
 
         </div>
     )

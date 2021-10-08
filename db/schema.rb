@@ -50,6 +50,4 @@ ActiveRecord::Schema.define(version: 2021_10_06_210750) do
   end
 
   add_foreign_key "options", "scripts"
-  add_foreign_key "user_scripts", "scripts"
-  add_foreign_key "user_scripts", "users"
 end

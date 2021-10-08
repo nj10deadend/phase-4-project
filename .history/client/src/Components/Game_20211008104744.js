@@ -183,7 +183,7 @@ function Game () {
             {renderButton1()} {renderButton2()} 
             <br></br>
             <br></br>
-            <button className="button" onClick={resetGame}>Reset</button>
+            <button onClick={resetGame}>Reset</button>
 
         </div>
     )

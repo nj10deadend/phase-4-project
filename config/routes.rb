@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :options
   resources :user_scripts
   resources :scripts, only: [:index, :create]
-  resources :users, only: [:index, :create]
+  resources :users, only: [:index, :show, :update, :create, :destroy]
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   get "/me", to: "users#show"

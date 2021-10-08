@@ -26,19 +26,9 @@ class UsersController < ApplicationController
       end
     end
 
-    # def update
-    #   # user = User.find_by(id:params[:id])
-    #   user = User.find_by_username(params[:username])
-    #   if user.update_attribute(:username, params[:username])
-    #     render json: user, status: :created
-    #   else
-    #     render json: user.errors.full_messages, status: :unprocessable_entity
-    #   end
-    # end 
-    ############## Update method that is supposed to work
     def update
-      # byebug
-        user = User.find_by(id:params[:id])
+      # user = User.find_by(id:params[:id])
+      user = User.find_by_username(params[:username])
       if user.update_attribute(:username, params[:username])
         render json: user, status: :created
       else
@@ -46,30 +36,17 @@ class UsersController < ApplicationController
       end
     end 
 
-    #################### My destroy
 
-
-    # def destroy
-    #   # user = User.find_by(id:params[:id])
-    #   user = User.find_by_username(params[:username])
-    #   if user
-    #   # if session[:user_id]
-    #     user.destroy
-    #     # session.delete :user_id
-    #     # @current_user.destroy
-    #     reset_session
-    #     redirect_to users_path, :notice => "User deleted."
-    #     render json: {}
-    #   else
-    #     render json: {error: "Could not find user"}, status: 404
-    #   end
-    # end
-
-    ##################### My destroy
     def destroy
-      user = User.find_by(id:params[:id])
+      # user = User.find_by(id:params[:id])
+      user = User.find_by_username(params[:username])
       if user
+      # if session[:user_id]
         user.destroy
+        # session.delete :user_id
+        # @current_user.destroy
+        reset_session
+        redirect_to users_path, :notice => "User deleted."
         render json: {}
       else
         render json: {error: "Could not find user"}, status: 404
